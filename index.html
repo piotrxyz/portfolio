@@ -1,0 +1,181 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>piotrkwak.com</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Personal portfolio" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/scrollreveal@4.0.7/dist/scrollreveal.min.js"></script>
+    <script src="./js/sr-duration.js"></script>
+  </head>
+
+  <body>
+    <header id="header" class="header">
+      <div id="particles-js"></div>
+      <h1 class="title">
+        Hello, I'm <span class="title__highlight">Piotr Kwak</span>.
+      </h1>
+      <span class="subtitle">I'm a front-end developer.</span>
+      <a class="scrolldown" aria-label="scroll down" href="#about"></a>
+    </header>
+    <nav class="nav">
+      <button class="nav__button" aria-label="Menu button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+    <div class="menu">
+      <div class="menu__bg">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#header">Home</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#about">About</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <main>
+      <section id="about" class="about">
+        <div class="about__heading">
+          <h2 class="about__title" data-aos="slide-up">About</h2>
+          <div class="about__title-bar" data-aos="zoom-out-right"></div>
+        </div>
+        <div class="about__me">
+          <img
+            class="about__me-img"
+            src="../assets/undraw_programming_2svr.svg"
+            data-aos="zoom-out-right"
+          />
+          <div class="about__me-right">
+            <h3 class="about__subtitle">Who am I?</h3>
+            <p class="about__description" data-aos="zoom-out-right">
+              I am a self-taught <strong>front-end developer</strong> from
+              <strong>Szczecin</strong>. I have decided to start learning
+              front-end technologies about a year ago. I am still improving my
+              skills by creating small projects on my own, looking for knowledge
+              on the web. I'm available for hire asap.
+            </p>
+            <a class="about__description-link" href="#contact">Get in touch</a>
+            <a
+              class="about__description-link about__description-link--portfolio"
+              href="#portfolio"
+            >
+              View my work
+            </a>
+          </div>
+        </div>
+        <div class="skills" data-aos="zoom-in">
+          <h3 class="skills__subtitle">My skills</h3>
+          <ul class="skills__list">
+            <li class="skills__item">
+              <img
+                class="skills__logo"
+                src="../assets/html-5.svg"
+                alt="HTML5 icon"
+              />
+              <h4 class="skills__text">HTML5</h4>
+            </li>
+            <li class="skills__item">
+              <img
+                class="skills__logo"
+                src="../assets/css3.svg"
+                alt="CSS3 icon"
+              />
+              <h4 class="skills__text">CSS3</h4>
+            </li>
+            <li class="skills__item">
+              <img
+                class="skills__logo"
+                src="../assets/sass.svg"
+                alt="SCSS icon"
+              />
+              <h4 class="skills__text">SCSS</h4>
+            </li>
+            <li class="skills__item">
+              <img
+                class="skills__logo"
+                src="../assets/javascript.svg"
+                alt="JavaScript icon"
+              />
+              <h4 class="skills__text">JavaScript</h4>
+            </li>
+            <li class="skills__item">
+              <img
+                class="skills__logo"
+                src="../assets/reactjs.svg"
+                alt="React icon"
+              />
+              <h4 class="skills__text">React</h4>
+            </li>
+            <li class="skills__item">
+              <img
+                class="skills__logo"
+                src="../assets/git.svg"
+                alt="GIT icon"
+              />
+              <h4 class="skills__text">GIT</h4>
+            </li>
+            <li class="skills__item">
+              <img
+                class="skills__logo"
+                src="../assets/figma.svg"
+                alt="Figma icon"
+              />
+              <h4 class="skills__text">Figma</h4>
+            </li>
+            <li class="skills__item">
+              <img
+                class="skills__logo"
+                src="../assets/npm.svg"
+                alt="NPM icon"
+              />
+              <h4 class="skills__text">NPM</h4>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="portfolio" class="portfolio">
+        <div class="portfolio__heading">
+          <h2 class="portfolio__title" data-aos="fade-right">Portfolio</h2>
+          <div class="portfolio__title-bar" data-aos="fade-left"></div>
+        </div>
+        <article class="project"></article>
+      </section>
+      <section id="contact" class="contact">
+        <div class="contact__heading" data-aos="zoom-in">
+          <h2 class="contact__title">Let's make something great</h2>
+          <div class="contact__title-bar" data-aos="fade-left"></div>
+        </div>
+        <p class="contact__text">
+          If you like my work and have some cool project to work on, just send
+          me direct message or contact me through social sites listed below.
+        </p>
+      </section>
+    </main>
+    <footer id="footer" class="footer">
+      <div class="footer__links">
+        <a class="linkedin" href="\\"></a>
+        <a class="github" href="\\"></a>
+      </div>
+      <span class="footer__text">&copy; 2020 Piotr Kwak</span>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/scrollreveal.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./js/aos.js"></script>
+    <script src="./js/nav.js"></script>
+  </body>
+</html>
