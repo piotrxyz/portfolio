@@ -1,0 +1,69 @@
+$breakpoints: (
+  "xsmall": 320px,
+  "small": 500px,
+  "medium": 768px,
+  "large": 1000px,
+  "x-large": 1200px,
+  "xx-large": 1500px,
+) !default;
+
+@mixin media($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+    +"Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+@mixin max-media($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+    +"Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+@mixin title {
+  font-weight: 900;
+  text-align: center;
+  font-size: 32px;
+  transition: all 0.3s;
+  margin-top: 30px;
+  text-transform: uppercase;
+
+  @include media("medium") {
+    font-size: 40px;
+  }
+
+  @include media("large") {
+    font-size: 50px;
+  }
+}
+
+@mixin title-bar {
+  background: #444649;
+  height: 4px;
+  width: 110px;
+}
+
+@mixin heading {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@mixin subtitle {
+  font-size: 20px;
+  transition: all 0.3s;
+
+  @include media("medium") {
+    font-size: 25px;
+  }
+}
