@@ -29,12 +29,16 @@ $breakpoints: (
   }
 }
 
+@mixin section {
+  min-height: 100vh;
+  padding: 30px 0;
+}
+
 @mixin title {
   font-weight: 900;
   text-align: center;
   font-size: 32px;
   transition: all 0.3s;
-  margin-top: 30px;
   text-transform: uppercase;
 
   @include media("medium") {

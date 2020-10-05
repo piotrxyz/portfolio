@@ -67,6 +67,7 @@ body {
   justify-content: center;
   text-align: center;
   z-index: 1;
+  transition: all 0.3s;
 
   @include media("medium") {
     font-size: 45px;
@@ -177,12 +178,10 @@ body {
 .menu {
   position: fixed;
   top: -100%;
-  left: 0;
   width: 100%;
   height: 100%;
   background: #1a1d25;
   z-index: 2;
-  opacity: 0;
   pointer-events: none;
   transition: all 0.3s;
 
@@ -196,8 +195,8 @@ body {
 
   &__list {
     list-style: none;
-    width: 60%;
-    height: 50%;
+    width: 90%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -206,15 +205,69 @@ body {
   }
 
   &__item {
-    width: 80%;
+    display: flex;
+    align-items: center;
     text-align: center;
-    text-transform: lowercase;
-    padding: 15px 0px;
+    text-decoration: none;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    height: calc(100% / 4);
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.02);
+    overflow: hidden;
+    transition: transform 0.55s cubic-bezier(0, 0.35, 0, 1),
+      color 0.15s ease-out 0.1s;
   }
 
   &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
     text-decoration: none;
-    color: white;
+    color: rgba(128, 128, 128, 0.905);
+    transition: all 1s;
+
+    &:hover {
+      color: white;
+    }
+
+    &::before {
+      top: 0;
+      transform: translate3d(-100%, 0, 0);
+      background-color: rgba(0, 0, 0, 0.02);
+      z-index: -2;
+      content: " ";
+      height: 75%;
+      width: 100%;
+      left: 0;
+      position: absolute;
+      transition: transform 0.4s cubic-bezier(0.65, 0.15, 0, 1);
+    }
+
+    &:hover::before {
+      transform: translate3d(0, 0, 0);
+    }
+
+    &::after {
+      transform: translate3d(100%, 0, 0);
+      content: " ";
+      height: 25%;
+      width: 100%;
+      left: 0;
+      position: absolute;
+      transition: transform 0.4s cubic-bezier(0.65, 0.15, 0, 1);
+      bottom: 0;
+      transition-delay: 125ms;
+      background-color: rgba(0, 0, 0, 0.02);
+      z-index: -3;
+    }
+
+    &:hover::after {
+      transform: translate3d(0, 0, 0);
+    }
   }
 }
 
@@ -225,13 +278,10 @@ body {
 }
 
 .about {
+  @include section;
   display: flex;
   flex-direction: column;
   background: #ffffff;
-
-  @include media("medium") {
-    min-height: 100vh;
-  }
 
   &__heading {
     @include heading;
@@ -250,7 +300,6 @@ body {
     text-align: center;
 
     @include media("medium") {
-      min-width: 900px;
       max-width: 1100px;
       flex-direction: row;
       align-self: center;
@@ -273,6 +322,10 @@ body {
     }
 
     &-right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
       @include media("medium") {
         margin-bottom: 100px;
       }
@@ -293,12 +346,10 @@ body {
     }
 
     &-link {
-      display: block;
       text-decoration: none;
       color: $blue;
       transition: all 0.3s;
       width: 200px;
-      margin: auto;
       margin-top: 30px;
       font-size: 25px;
       font-weight: bold;
@@ -371,7 +422,7 @@ body {
 }
 
 .portfolio {
-  min-height: 100vh;
+  @include section;
 
   &__heading {
     @include heading;
@@ -391,7 +442,7 @@ body {
 }
 
 .contact {
-  height: 100vh;
+  @include section;
   background: #ffffff;
 
   &__heading {

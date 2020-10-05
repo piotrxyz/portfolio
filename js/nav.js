@@ -17,7 +17,7 @@ navButton.addEventListener("click", () => {
 });
 
 menuLink.forEach((link) => {
-  link.addEventListener("click", (e) => {
+  link.addEventListener("click", () => {
     menu.classList.remove("visible");
     navButton.classList.toggle("nav__button--active");
   });
