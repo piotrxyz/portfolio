@@ -11,6 +11,7 @@ $blue: #00b0ff;
 
 html {
   scroll-behavior: smooth;
+  font-size: 62.5%;
 }
 
 body {
@@ -42,14 +43,14 @@ body {
   font-weight: 400;
   color: white;
   text-align: center;
-  font-size: 32px;
-  line-height: 36px;
+  font-size: 3.2rem;
+  line-height: 3.6rem;
   transition: all 0.3s;
   z-index: 1;
 
   @include media("medium") {
-    font-size: 45px;
-    line-height: 49px;
+    font-size: 4.5rem;
+    line-height: 4.9rem;
   }
 
   &__highlight {
@@ -61,8 +62,8 @@ body {
 .subtitle {
   font-weight: 400;
   color: white;
-  font-size: 32px;
-  line-height: 36px;
+  font-size: 3.2rem;
+  line-height: 3.6rem;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -70,8 +71,8 @@ body {
   transition: all 0.3s;
 
   @include media("medium") {
-    font-size: 45px;
-    line-height: 49px;
+    font-size: 4.5rem;
+    line-height: 4.9rem;
   }
 }
 
@@ -201,7 +202,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 40px;
+    font-size: 4rem;
   }
 
   &__item {
@@ -317,7 +318,7 @@ body {
 
       @include media("medium") {
         min-width: 400px;
-        margin-top: 0;
+        margin-top: -100px;
       }
     }
 
@@ -338,8 +339,8 @@ body {
   }
 
   &__description {
-    width: 80%;
-    margin: auto;
+    width: 90%;
+    font-size: 1.8rem;
 
     @include media("medium") {
       width: 55%;
@@ -351,7 +352,7 @@ body {
       transition: all 0.3s;
       width: 200px;
       margin-top: 30px;
-      font-size: 25px;
+      font-size: 2.5rem;
       font-weight: bold;
 
       &:hover {
@@ -418,6 +419,12 @@ body {
 
   &__text {
     font-weight: 400;
+    font-size: 1.4rem;
+    transition: all 0.3s;
+
+    @include media("medium") {
+      font-size: 1.8rem;
+    }
   }
 }
 
@@ -500,7 +507,7 @@ body {
     text-transform: uppercase;
     color: rgba(176, 224, 234, 0.61);
     letter-spacing: 2;
-    font-size: 12px;
+    font-size: 1.2rem;
     padding: 20px;
   }
 }

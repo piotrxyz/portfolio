@@ -37,16 +37,16 @@ $breakpoints: (
 @mixin title {
   font-weight: 900;
   text-align: center;
-  font-size: 32px;
+  font-size: 3.2rem;
   transition: all 0.3s;
   text-transform: uppercase;
 
   @include media("medium") {
-    font-size: 40px;
+    font-size: 4rem;
   }
 
   @include media("large") {
-    font-size: 50px;
+    font-size: 5rem;
   }
 }
 
@@ -64,10 +64,10 @@ $breakpoints: (
 }
 
 @mixin subtitle {
-  font-size: 20px;
+  font-size: 3rem;
   transition: all 0.3s;
 
   @include media("medium") {
-    font-size: 25px;
+    font-size: 3.5rem;
   }
 }
