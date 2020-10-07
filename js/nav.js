@@ -1,7 +1,6 @@
 const navButton = document.querySelector(".nav__button");
 const menu = document.querySelector(".menu");
-const menuLink = [...document.querySelectorAll(".menu__link")];
-console.log(menuLink);
+const menuLinks = [...document.querySelectorAll(".menu__link")];
 
 window.addEventListener("scroll", () => {
   if (window.pageYOffset > -1) {
@@ -16,17 +15,11 @@ navButton.addEventListener("click", () => {
   menu.classList.toggle("visible");
 });
 
-menuLink.forEach((link) => {
-  link.addEventListener("click", () => {
-
-    if (link.classList.contains("clicked")) {
-      link.classList.remove("clicked");
-    } else {
-      link.classList.add("clicked");
-    };
-
+menuLinks.forEach((link) => {
+  link.addEventListener("click", function () {
+    menuLinks.forEach(li => li.classList.remove("clicked"));
+    this.classList.add("clicked");
     menu.classList.remove("visible");
     navButton.classList.toggle("nav__button--active");
   });
 });
-
