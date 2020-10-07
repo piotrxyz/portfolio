@@ -18,7 +18,15 @@ navButton.addEventListener("click", () => {
 
 menuLink.forEach((link) => {
   link.addEventListener("click", () => {
+
+    if (link.classList.contains("clicked")) {
+      link.classList.remove("clicked");
+    } else {
+      link.classList.add("clicked");
+    };
+
     menu.classList.remove("visible");
     navButton.classList.toggle("nav__button--active");
   });
 });
+

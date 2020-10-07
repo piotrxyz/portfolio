@@ -48,7 +48,7 @@
     <main>
       <section id="about" class="about">
         <div class="about__heading">
-          <h2 class="about__title" data-aos="slide-up">About</h2>
+          <h2 class="about__title" data-aos="fade-up">About</h2>
           <div class="about__title-bar" data-aos="zoom-out-right"></div>
         </div>
         <div class="about__me">
@@ -56,10 +56,17 @@
             class="about__me-img"
             src="../assets/undraw_programming_2svr.svg"
             data-aos="zoom-out-right"
+            data-aos-delay="300"
           />
           <div class="about__me-right">
-            <h3 class="about__subtitle">Who am I?</h3>
-            <p class="about__description" data-aos="zoom-out-right">
+            <h3 class="about__subtitle" data-aos="fade-up" data-aos-delay="500">
+              Who am I?
+            </h3>
+            <p
+              class="about__description"
+              data-aos="zoom-out-right"
+              data-aos-delay="700"
+            >
               I am a self-taught <strong>front-end developer</strong> from
               <strong>Szczecin</strong>. I have decided to start learning
               <strong>front-end</strong> technologies about a
@@ -68,16 +75,26 @@
               looking for knowledge on the web. I'm
               <strong>available</strong> for hire.
             </p>
-            <a class="about__description-link" href="#contact">Get in touch</a>
+            <a
+              class="about__description-link"
+              href="#contact"
+              data-aos="fade-down"
+              data-aos-delay="800"
+            >
+              <span data-aos="hover" data-aos-duration="500">Get in touch</span>
+            </a>
             <a
               class="about__description-link about__description-link--portfolio"
               href="#portfolio"
+              data-aos="fade-down"
+              data-aos-delay="900"
+              data-aos-anchor=".about__description"
             >
-              View my work
+              <span data-aos="hover" data-aos-duration="500">View my work</span>
             </a>
           </div>
         </div>
-        <div class="skills" data-aos="zoom-in">
+        <div class="skills" data-aos="zoom-in" data-aos-delay="1000">
           <h3 class="skills__subtitle">My skills</h3>
           <ul class="skills__list">
             <li class="skills__item">

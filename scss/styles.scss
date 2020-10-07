@@ -124,8 +124,7 @@ body {
     height: 40px;
     border-radius: 50%;
     background: #1a1d256e;
-    border: transparent;
-    outline: transparent;
+    border: none;
     transition: all 0.3s;
     cursor: pointer;
     pointer-events: none;
@@ -197,12 +196,11 @@ body {
   &__list {
     list-style: none;
     width: 90%;
-    height: 80%;
+    height: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 4rem;
   }
 
   &__item {
@@ -227,6 +225,7 @@ body {
     justify-content: center;
     width: 100%;
     height: 100%;
+    font-size: 5rem;
     text-decoration: none;
     color: rgba(128, 128, 128, 0.905);
     transition: all 1s;
@@ -356,7 +355,7 @@ body {
       font-weight: bold;
 
       &:hover {
-        transform: scale(1.1);
+        text-transform: scale(1.1);
       }
 
       &--portfolio {
@@ -510,4 +509,17 @@ body {
     font-size: 1.2rem;
     padding: 20px;
   }
+}
+
+[data-aos="hover"] {
+  font-size: 2.5rem;
+  &:hover {
+    &.aos-animate {
+      font-size: 2.6rem;
+    }
+  }
+}
+
+.clicked {
+  color: white;
 }
