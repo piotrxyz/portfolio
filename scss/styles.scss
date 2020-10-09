@@ -11,6 +11,8 @@ $blue: #00b0ff;
 
 html {
   scroll-behavior: smooth;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   font-size: 62.5%;
 }
 
