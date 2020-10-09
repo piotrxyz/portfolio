@@ -6,15 +6,15 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
   font-size: 62.5%; }
 
 body {
   font-family: "Raleway", sans-serif;
   background: #252934;
   position: relative;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch; }
 
 .header {
   position: relative;
