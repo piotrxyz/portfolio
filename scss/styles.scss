@@ -10,7 +10,6 @@ $blue: #00b0ff;
 }
 
 html {
-  scroll-behavior: smooth;
   font-size: 62.5%;
 }
 
@@ -19,8 +18,6 @@ body {
   background: #252934;
   position: relative;
   overflow-x: hidden;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
 }
 
 .header {

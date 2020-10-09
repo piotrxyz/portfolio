@@ -5,16 +5,13 @@
   box-sizing: border-box; }
 
 html {
-  scroll-behavior: smooth;
   font-size: 62.5%; }
 
 body {
   font-family: "Raleway", sans-serif;
   background: #252934;
   position: relative;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch; }
+  overflow-x: hidden; }
 
 .header {
   position: relative;
