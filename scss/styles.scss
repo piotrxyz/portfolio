@@ -497,15 +497,6 @@ body {
   }
 }
 
-[data-aos="hover"] {
-  font-size: 2.5rem;
-  &:hover {
-    &.aos-animate {
-      font-size: 2.6rem;
-    }
-  }
-}
-
 .clicked {
   color: white;
 }

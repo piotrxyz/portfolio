@@ -59,21 +59,7 @@ links.forEach(link => {
   })
 })
 
-
 // particles
 particlesJS.load('particles-js', 'assets/particles.json', function () {
   console.log('callback - particles.js config loaded')
-})
-
-// AOS
-AOS.init({
-  duration: 1200,
-  once: true,
-  startEvent: 'DOMContentLoaded'
-})
-
-// ScrollReveal
-ScrollReveal().reveal('.header', {
-  delay: 1000,
-  duration: 3000,
 })

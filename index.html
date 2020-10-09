@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="description" content="Personal portfolio" />
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script src="https://unpkg.com/scrollreveal@4.0.7/dist/scrollreveal.min.js"></script>
   </head>
 
   <body>
@@ -27,16 +25,16 @@
       </button>
       <div class="menu">
         <ul class="menu__list">
-          <li class="menu__item" data-id="header">
+          <li class="menu__item">
             <a class="menu__link" href="#header">Home</a>
           </li>
-          <li class="menu__item" data-id="about">
+          <li class="menu__item">
             <a class="menu__link" href="#about">About</a>
           </li>
-          <li class="menu__item" data-id="portfolio">
+          <li class="menu__item">
             <a class="menu__link" href="#portfolio">Portfolio</a>
           </li>
-          <li class="menu__item" data-id="contact">
+          <li class="menu__item">
             <a class="menu__link" href="#contact">Contact</a>
           </li>
         </ul>
@@ -45,24 +43,20 @@
     <main>
       <section id="about" class="about">
         <div class="about__heading">
-          <h2 class="about__title" data-aos="fade-up">About</h2>
-          <div class="about__title-bar" data-aos="zoom-out-right"></div>
+          <h2 class="about__title">About</h2>
+          <div class="about__title-bar"></div>
         </div>
         <div class="about__me">
           <img
             class="about__me-img"
             src="./assets/undraw_programming_2svr.svg"
-            data-aos="zoom-out-right"
-            data-aos-delay="300"
           />
           <div class="about__me-right">
-            <h3 class="about__subtitle" data-aos="fade-up" data-aos-delay="500">
+            <h3 class="about__subtitle">
               Who am I?
             </h3>
             <p
               class="about__description"
-              data-aos="zoom-out-right"
-              data-aos-delay="700"
             >
               I am a self-taught <strong>front-end developer</strong> from
               <strong>Szczecin</strong>. I have decided to start learning
@@ -75,23 +69,18 @@
             <a
               class="about__description-link"
               href="#contact"
-              data-aos="fade-down"
-              data-aos-delay="800"
             >
-              <span data-aos="hover" data-aos-duration="500">Get in touch</span>
+              <span>Get in touch</span>
             </a>
             <a
               class="about__description-link about__description-link--portfolio"
               href="#portfolio"
-              data-aos="fade-down"
-              data-aos-delay="900"
-              data-aos-anchor=".about__description-link"
             >
-              <span data-aos="hover" data-aos-duration="500">View my work</span>
+              <span>View my work</span>
             </a>
           </div>
         </div>
-        <div class="skills" data-aos="zoom-in" data-aos-delay="1000">
+        <div class="skills">
           <h3 class="skills__subtitle">My skills</h3>
           <ul class="skills__list">
             <li class="skills__item">
@@ -155,15 +144,15 @@
       </section>
       <section id="portfolio" class="portfolio">
         <div class="portfolio__heading">
-          <h2 class="portfolio__title" data-aos="fade-right">Portfolio</h2>
-          <div class="portfolio__title-bar" data-aos="fade-left"></div>
+          <h2 class="portfolio__title">Portfolio</h2>
+          <div class="portfolio__title-bar"></div>
         </div>
         <article class="project"></article>
       </section>
       <section id="contact" class="contact">
-        <div class="contact__heading" data-aos="zoom-in">
+        <div class="contact__heading">
           <h2 class="contact__title">Let's talk</h2>
-          <div class="contact__title-bar" data-aos="fade-left"></div>
+          <div class="contact__title-bar"></div>
         </div>
         <p class="contact__text">
           If you like my work and have some cool project to work on, just send
@@ -179,7 +168,6 @@
       <span class="footer__text">&copy; 2020 PK</span>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./js/scripts.js"></script>
   </body>
 </html>
