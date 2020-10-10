@@ -19,8 +19,8 @@ navButton.addEventListener('click', () => {
 
 menuLinks.forEach((link) => {
   link.addEventListener('click', function () {
-    menuLinks.forEach(li => li.classList.remove('clicked'))
-    this.classList.add('clicked')
+    menuLinks.forEach(li => li.classList.remove('highlight'))
+    this.classList.add('highlight')
     menu.classList.remove('visible')
     navButton.classList.toggle('nav__button--active')
   })
@@ -58,6 +58,24 @@ links.forEach(link => {
     })
   })
 })
+
+
+// menu links highlight depending on scroll position
+// if (
+//   'IntersectionObserver' in window &&
+//   'IntersectionObserverEntry' in window &&
+//   'intersectionRatio' in window.IntersectionObserverEntry.prototype
+// ) {
+//   let observer = new IntersectionObserver(entries => {
+//     if (entries[0].boundingClientRect.y < 0) {
+//       menuLinks.forEach(menuLink => menuLink.classList.add('highlight'));
+//     } else {
+//       menuLinks.forEach(menuLink => menuLink.classList.remove('highlight'));
+//     }
+//   });
+//   observer.observe(document.querySelector('#scroll-anchor'));
+// }
+
 
 // particles
 particlesJS.load('particles-js', 'assets/particles.json', function () {

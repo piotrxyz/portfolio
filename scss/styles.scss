@@ -27,6 +27,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  animation: fadeIn 4s;
 }
 
 #particles-js {
@@ -91,6 +92,7 @@ body {
     opacity: 1;
     filter: invert(100%);
     transform: scale(1.1);
+    animation-play-state: paused;
   }
 }
 
@@ -105,6 +107,16 @@ body {
 
   100% {
     transform: translate(0, 0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 
@@ -334,21 +346,21 @@ body {
     &-link {
       text-decoration: none;
       color: $blue;
-      transition: all 0.3s;
+      transition: all 0.7s;
       width: 200px;
       margin-top: 30px;
       font-size: 2.5rem;
       font-weight: bold;
 
       &:hover {
-        text-transform: scale(1.1);
+        font-size: 2.6rem;
       }
 
       &--portfolio {
         margin-top: 0;
 
         &:hover {
-          transform: scale(1.1);
+          font-size: 2.6rem;
         }
       }
     }
@@ -431,6 +443,32 @@ body {
       background: white;
     }
   }
+
+  .projects__container {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 30px 0;
+    transition: all 1s;
+
+    @include media("medium") {
+      max-width: 90%;
+      margin: auto;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include media("large") {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  .project {
+    width: 300px;
+    height: 300px;
+    margin: 10px 10px;
+    background: rgba(0, 0, 0, 0.438);
+  }
 }
 
 .contact {
@@ -453,6 +491,8 @@ body {
     padding: 30px 0;
     width: 60%;
     margin: auto;
+    text-align: center;
+    font-size: 2rem;
   }
 }
 
@@ -463,6 +503,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 30px;
 
   &__links {
     display: flex;
@@ -471,20 +512,23 @@ body {
       flex-direction: row;
     }
 
-    .linkedin {
-      margin: 20px;
-      display: block;
+    &-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
       width: 150px;
       height: 40px;
-      background: rgba(6, 111, 248, 0.548);
-    }
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: white;
 
-    .github {
-      margin: 20px;
-      display: block;
-      width: 150px;
-      height: 40px;
-      background: rgba(91, 96, 102, 0.294);
+      &--linkedin {
+        background: rgba(6, 111, 248, 0.548);
+      }
+      &--github {
+        background: rgba(91, 96, 102, 0.294);
+      }
     }
   }
   &__text {
@@ -497,6 +541,6 @@ body {
   }
 }
 
-.clicked {
+.highlight {
   color: white;
 }
