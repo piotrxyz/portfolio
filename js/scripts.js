@@ -59,23 +59,35 @@ links.forEach(link => {
   })
 })
 
+// about animations
+const aboutTitle = document.querySelector('.about__title')
+const aboutTitleBar = document.querySelector('.about__title-bar')
+const aboutSubtitle = document.querySelector('.about__subtitle')
+const aboutDescription = document.querySelector('.about__description')
+const aboutImg = document.querySelector('.about__me-img')
+const aboutLink = document.querySelector('.about__description-link')
+const aboutLinkPortfolio = document.querySelector('.about__description-link--portfolio')
+console.log('about title selected')
 
-// menu links highlight depending on scroll position
-// if (
-//   'IntersectionObserver' in window &&
-//   'IntersectionObserverEntry' in window &&
-//   'intersectionRatio' in window.IntersectionObserverEntry.prototype
-// ) {
-//   let observer = new IntersectionObserver(entries => {
-//     if (entries[0].boundingClientRect.y < 0) {
-//       menuLinks.forEach(menuLink => menuLink.classList.add('highlight'));
-//     } else {
-//       menuLinks.forEach(menuLink => menuLink.classList.remove('highlight'));
-//     }
-//   });
-//   observer.observe(document.querySelector('#scroll-anchor'));
-// }
-
+if (
+  'IntersectionObserver' in window &&
+  'IntersectionObserverEntry' in window &&
+  'intersectionRatio' in window.IntersectionObserverEntry.prototype
+) {
+  let observer = new IntersectionObserver(entries => {
+    if (entries[0].boundingClientRect.y < 0 && !aboutTitle.classList.contains('slide-left')) {
+      aboutTitle.classList.add('slide-left');
+      aboutTitleBar.classList.add('slide-right');
+      aboutSubtitle.classList.add('slide-up');
+      aboutDescription.classList.add('slide-up');
+      aboutImg.classList.add('fade-in');
+      aboutLink.classList.add('slide-up');
+      aboutLinkPortfolio.classList.add('slide-up');
+      console.log('class add')
+    }
+  });
+  observer.observe(document.querySelector('#scroll-anchor'));
+}
 
 // particles
 particlesJS.load('particles-js', 'assets/particles.json', function () {

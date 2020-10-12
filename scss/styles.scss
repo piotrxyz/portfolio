@@ -3,6 +3,87 @@
 
 $blue: #00b0ff;
 
+@keyframes pulse {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, 10px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 3s cubic-bezier(0.24, 0.45, 0.44, 0.93) forwards;
+}
+
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) translateX(0);
+  }
+}
+
+.slide-left {
+  animation: slideLeft 2s cubic-bezier(0.24, 0.45, 0.44, 0.93) forwards;
+}
+
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) translateX(0);
+  }
+}
+
+.slide-right {
+  animation: slideRight 2s cubic-bezier(0.24, 0.45, 0.44, 0.93) forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) translateY(0);
+  }
+}
+
+.slide-up {
+  animation: slideUp 1s cubic-bezier(0.24, 0.45, 0.44, 0.93) forwards;
+}
+
+#scroll-anchor {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 0;
+  left: 0;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -93,30 +174,6 @@ body {
     filter: invert(100%);
     transform: scale(1.1);
     animation-play-state: paused;
-  }
-}
-
-@keyframes pulse {
-  0% {
-    transform: translate(0, 0);
-  }
-
-  50% {
-    transform: translate(0, 10px);
-  }
-
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
   }
 }
 
@@ -287,8 +344,10 @@ body {
 
   &__title {
     @include title;
+    transform: translateX(-4rem);
     &-bar {
       @include title-bar;
+      transform: translateX(4rem);
     }
   }
   &__me {
@@ -333,11 +392,14 @@ body {
   &__subtitle {
     @include subtitle;
     padding: 30px;
+    transform: translateY(4rem);
   }
 
   &__description {
     width: 90%;
     font-size: 1.8rem;
+    animation-delay: 0.3s;
+    opacity: 0;
 
     @include media("medium") {
       width: 55%;
@@ -351,6 +413,8 @@ body {
       margin-top: 30px;
       font-size: 2.5rem;
       font-weight: bold;
+      opacity: 0;
+      animation-delay: 0.3s;
 
       &:hover {
         font-size: 2.6rem;
@@ -358,6 +422,8 @@ body {
 
       &--portfolio {
         margin-top: 0;
+        opacity: 0;
+        animation-delay: 0.5s;
 
         &:hover {
           font-size: 2.6rem;
