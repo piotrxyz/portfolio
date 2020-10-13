@@ -73,15 +73,7 @@ $blue: #00b0ff;
 }
 
 .slide-up {
-  animation: slideUp 1s cubic-bezier(0.24, 0.45, 0.44, 0.93) forwards;
-}
-
-#scroll-anchor {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  top: 0;
-  left: 0;
+  animation: slideUp 1s ease forwards;
 }
 
 * {
@@ -158,20 +150,27 @@ body {
 }
 
 .scrolldown {
-  opacity: 0.5;
   align-self: center;
   cursor: pointer;
   margin-top: 30px;
   animation: pulse 2s infinite;
   transition: all 1s;
   display: block;
-  background-image: url(../assets/down-arrow.svg);
   width: 20px;
   height: 20px;
 
+  &__icon {
+    opacity: 0.5;
+    fill: $blue;
+    transition: all 1s;
+
+    &:hover {
+      opacity: 1;
+      fill: white;
+    }
+  }
+
   &:hover {
-    opacity: 1;
-    filter: invert(100%);
     transform: scale(1.1);
     animation-play-state: paused;
   }
@@ -344,10 +343,10 @@ body {
 
   &__title {
     @include title;
-    transform: translateX(-4rem);
+    opacity: 0;
     &-bar {
       @include title-bar;
-      transform: translateX(4rem);
+      opacity: 0;
     }
   }
   &__me {
@@ -367,6 +366,7 @@ body {
       width: 250px;
       margin-top: 30px;
       transition: all 0.3s;
+      opacity: 0;
 
       @include media("xsmall") {
         width: 300px;
@@ -391,14 +391,11 @@ body {
 
   &__subtitle {
     @include subtitle;
-    padding: 30px;
-    transform: translateY(4rem);
   }
 
   &__description {
     width: 90%;
     font-size: 1.8rem;
-    animation-delay: 0.3s;
     opacity: 0;
 
     @include media("medium") {
@@ -414,7 +411,6 @@ body {
       font-size: 2.5rem;
       font-weight: bold;
       opacity: 0;
-      animation-delay: 0.3s;
 
       &:hover {
         font-size: 2.6rem;
@@ -422,7 +418,6 @@ body {
 
       &--portfolio {
         margin-top: 0;
-        opacity: 0;
         animation-delay: 0.5s;
 
         &:hover {
@@ -443,7 +438,6 @@ body {
 
   &__subtitle {
     @include subtitle;
-    padding: 30px;
   }
 
   &__list {
@@ -466,6 +460,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    opacity: 0;
   }
 
   &__logo {
@@ -501,6 +496,8 @@ body {
   &__title {
     @include title;
     color: white;
+    opacity: 0;
+
     &::after {
       background: white;
     }

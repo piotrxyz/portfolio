@@ -47,14 +47,7 @@
     transform: translate3d(0, 0, 0) translateY(0); } }
 
 .slide-up {
-  animation: slideUp 1s cubic-bezier(0.24, 0.45, 0.44, 0.93) forwards; }
-
-#scroll-anchor {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  top: 0;
-  left: 0; }
+  animation: slideUp 1s ease forwards; }
 
 * {
   margin: 0;
@@ -119,19 +112,22 @@ body {
       line-height: 4.9rem; } }
 
 .scrolldown {
-  opacity: 0.5;
   align-self: center;
   cursor: pointer;
   margin-top: 30px;
   animation: pulse 2s infinite;
   transition: all 1s;
   display: block;
-  background-image: url(../assets/down-arrow.svg);
   width: 20px;
   height: 20px; }
+  .scrolldown__icon {
+    opacity: 0.5;
+    fill: #00b0ff;
+    transition: all 1s; }
+    .scrolldown__icon:hover {
+      opacity: 1;
+      fill: white; }
   .scrolldown:hover {
-    opacity: 1;
-    filter: invert(100%);
     transform: scale(1.1);
     animation-play-state: paused; }
 
@@ -266,7 +262,7 @@ body {
     font-size: 3.2rem;
     transition: all 0.3s;
     text-transform: uppercase;
-    transform: translateX(-4rem); }
+    opacity: 0; }
     @media (min-width: 768px) {
       .about__title {
         font-size: 4rem; } }
@@ -277,7 +273,8 @@ body {
       background: #444649;
       height: 4px;
       width: 110px;
-      transform: translateX(4rem); }
+      opacity: 0;
+      opacity: 0; }
   .about__me {
     display: flex;
     flex-direction: column;
@@ -292,7 +289,8 @@ body {
     .about__me-img {
       width: 250px;
       margin-top: 30px;
-      transition: all 0.3s; }
+      transition: all 0.3s;
+      opacity: 0; }
       @media (min-width: 320px) {
         .about__me-img {
           width: 300px; } }
@@ -309,16 +307,15 @@ body {
           margin-bottom: 100px; } }
   .about__subtitle {
     font-size: 3rem;
-    transition: all 0.3s;
     padding: 30px;
-    transform: translateY(4rem); }
+    transition: all 0.3s;
+    opacity: 0; }
     @media (min-width: 768px) {
       .about__subtitle {
         font-size: 3.5rem; } }
   .about__description {
     width: 90%;
     font-size: 1.8rem;
-    animation-delay: 0.3s;
     opacity: 0; }
     @media (min-width: 768px) {
       .about__description {
@@ -331,13 +328,11 @@ body {
       margin-top: 30px;
       font-size: 2.5rem;
       font-weight: bold;
-      opacity: 0;
-      animation-delay: 0.3s; }
+      opacity: 0; }
       .about__description-link:hover {
         font-size: 2.6rem; }
       .about__description-link--portfolio {
         margin-top: 0;
-        opacity: 0;
         animation-delay: 0.5s; }
         .about__description-link--portfolio:hover {
           font-size: 2.6rem; }
@@ -350,8 +345,9 @@ body {
       padding: 0 0 0 0; } }
   .skills__subtitle {
     font-size: 3rem;
+    padding: 30px;
     transition: all 0.3s;
-    padding: 30px; }
+    opacity: 0; }
     @media (min-width: 768px) {
       .skills__subtitle {
         font-size: 3.5rem; } }
@@ -371,7 +367,8 @@ body {
     margin: 0 10px 20px 10px;
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    opacity: 0; }
   .skills__logo {
     width: 60px;
     height: 60px;
@@ -402,7 +399,8 @@ body {
     font-size: 3.2rem;
     transition: all 0.3s;
     text-transform: uppercase;
-    color: white; }
+    color: white;
+    opacity: 0; }
     @media (min-width: 768px) {
       .portfolio__title {
         font-size: 4rem; } }
@@ -415,6 +413,7 @@ body {
       background: #444649;
       height: 4px;
       width: 110px;
+      opacity: 0;
       background: white; }
   .portfolio .projects__container {
     display: grid;
@@ -462,6 +461,7 @@ body {
       background: #444649;
       height: 4px;
       width: 110px;
+      opacity: 0;
       background: black; }
   .contact__text {
     padding: 30px 0;

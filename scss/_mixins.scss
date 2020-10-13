@@ -54,6 +54,7 @@ $breakpoints: (
   background: #444649;
   height: 4px;
   width: 110px;
+  opacity: 0;
 }
 
 @mixin heading {
@@ -65,7 +66,9 @@ $breakpoints: (
 
 @mixin subtitle {
   font-size: 3rem;
+  padding: 30px;
   transition: all 0.3s;
+  opacity: 0;
 
   @include media("medium") {
     font-size: 3.5rem;

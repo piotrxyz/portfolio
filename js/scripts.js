@@ -59,7 +59,7 @@ links.forEach(link => {
   })
 })
 
-// about animations
+// animations
 const aboutTitle = document.querySelector('.about__title')
 const aboutTitleBar = document.querySelector('.about__title-bar')
 const aboutSubtitle = document.querySelector('.about__subtitle')
@@ -67,27 +67,73 @@ const aboutDescription = document.querySelector('.about__description')
 const aboutImg = document.querySelector('.about__me-img')
 const aboutLink = document.querySelector('.about__description-link')
 const aboutLinkPortfolio = document.querySelector('.about__description-link--portfolio')
-console.log('about title selected')
+const skillsSubtitle = document.querySelector('.skills__subtitle')
+const skills = document.querySelectorAll('.skills__item')
+const portfolioTitle = document.querySelector('.portfolio__title')
+const portfolioTitleBar = document.querySelector('.portfolio__title-bar')
 
-if (
-  'IntersectionObserver' in window &&
-  'IntersectionObserverEntry' in window &&
-  'intersectionRatio' in window.IntersectionObserverEntry.prototype
-) {
-  let observer = new IntersectionObserver(entries => {
-    if (entries[0].boundingClientRect.y < 0 && !aboutTitle.classList.contains('slide-left')) {
-      aboutTitle.classList.add('slide-left');
-      aboutTitleBar.classList.add('slide-right');
-      aboutSubtitle.classList.add('slide-up');
-      aboutDescription.classList.add('slide-up');
-      aboutImg.classList.add('fade-in');
-      aboutLink.classList.add('slide-up');
-      aboutLinkPortfolio.classList.add('slide-up');
-      console.log('class add')
-    }
-  });
-  observer.observe(document.querySelector('#scroll-anchor'));
+function animateItems() {
+  const windowHeight = window.innerHeight
+  const aboutTitleDistanceToTop = aboutTitle.getBoundingClientRect().top
+  const aboutTitleBarDistanceToTop = aboutTitleBar.getBoundingClientRect().top
+  const aboutImgDistanceToTop = aboutImg.getBoundingClientRect().top
+  const aboutSubtitleDistanceToTop = aboutSubtitle.getBoundingClientRect().top
+  const aboutDescriptionDistanceToTop = aboutDescription.getBoundingClientRect().top
+  const aboutLinkDistanceToTop = aboutLink.getBoundingClientRect().top
+  const aboutLinkPortfolioDistanceToTop = aboutLink.getBoundingClientRect().top
+  const skillsSubtitleDistanceToTop = skillsSubtitle.getBoundingClientRect().top
+  const portfolioTitleDistanceToTop = portfolioTitle.getBoundingClientRect().top
+
+  // if aboutTitle is x% in viewport
+  const aboutTitleVisible = aboutTitleDistanceToTop + windowHeight * 0.3 < windowHeight
+  const aboutTitleBarVisible = aboutTitleBarDistanceToTop + windowHeight * 0.3 < windowHeight
+  const aboutImgVisible = aboutImgDistanceToTop + windowHeight * 0.3 < windowHeight
+  const aboutSubtitleVisible = aboutSubtitleDistanceToTop + windowHeight * 0.3 < windowHeight
+  const aboutDescriptionVisible = aboutDescriptionDistanceToTop + windowHeight * 0.3 < windowHeight
+  const aboutLinkVisible = aboutLinkDistanceToTop + windowHeight * 0.3 < windowHeight
+  const aboutLinkPortfolioVisible = aboutLinkPortfolioDistanceToTop + windowHeight * 0.3 < windowHeight
+  const skillsSubtitleVisible = skillsSubtitleDistanceToTop + windowHeight * 0.3 < windowHeight
+  const portfolioTitleVisible = portfolioTitleDistanceToTop + windowHeight * 0.1 < windowHeight
+
+  // if visible add class
+  if (aboutTitleVisible && !aboutTitle.classList.contains('slide-left')) {
+    aboutTitle.classList.add('slide-left')
+  }
+  if (aboutTitleBarVisible && !aboutTitleBar.classList.contains('slide-right')) {
+    aboutTitleBar.classList.add('slide-right')
+  }
+  if (aboutImgVisible && !aboutImg.classList.contains('slide-up')) {
+    aboutImg.classList.add('slide-up')
+  }
+  if (aboutSubtitleVisible && !aboutSubtitle.classList.contains('slide-up')) {
+    aboutSubtitle.classList.add('slide-up')
+  }
+  if (aboutDescriptionVisible && !aboutDescription.classList.contains('slide-up')) {
+    aboutDescription.classList.add('slide-up')
+  }
+  if (aboutLinkVisible && !aboutLink.classList.contains('slide-up')) {
+    aboutLink.classList.add('slide-up')
+  }
+  if (aboutLinkPortfolioVisible && !aboutLinkPortfolio.classList.contains('slide-up')) {
+    aboutLinkPortfolio.classList.add('slide-up')
+  }
+  if (skillsSubtitleVisible && !skillsSubtitle.classList.contains('slide-up')) {
+    skillsSubtitle.classList.add('slide-up')
+  }
+
+  if (skillsSubtitleVisible && !skills[0].classList.contains('fade-in')) {
+    skills.forEach((skill, index) => setTimeout(() => {
+      skill.classList.add('fade-in')
+    }, 150 * (index)))
+  }
+
+  if (portfolioTitleVisible && !portfolioTitle.classList.contains('slide-right')) {
+    portfolioTitle.classList.add('slide-right')
+    portfolioTitleBar.classList.add('slide-left')
+  }
 }
+
+window.addEventListener('scroll', animateItems)
 
 // particles
 particlesJS.load('particles-js', 'assets/particles.json', function () {
