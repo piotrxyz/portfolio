@@ -273,7 +273,6 @@ body {
       background: #444649;
       height: 4px;
       width: 110px;
-      opacity: 0;
       opacity: 0; }
   .about__me {
     display: flex;
@@ -399,8 +398,8 @@ body {
     font-size: 3.2rem;
     transition: all 0.3s;
     text-transform: uppercase;
-    color: white;
-    opacity: 0; }
+    opacity: 0;
+    color: white; }
     @media (min-width: 768px) {
       .portfolio__title {
         font-size: 4rem; } }
@@ -450,7 +449,8 @@ body {
     text-align: center;
     font-size: 3.2rem;
     transition: all 0.3s;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    opacity: 0; }
     @media (min-width: 768px) {
       .contact__title {
         font-size: 4rem; } }

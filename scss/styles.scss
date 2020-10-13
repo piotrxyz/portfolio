@@ -343,10 +343,9 @@ body {
 
   &__title {
     @include title;
-    opacity: 0;
+
     &-bar {
       @include title-bar;
-      opacity: 0;
     }
   }
   &__me {
@@ -496,7 +495,6 @@ body {
   &__title {
     @include title;
     color: white;
-    opacity: 0;
 
     &::after {
       background: white;

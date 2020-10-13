@@ -71,6 +71,9 @@ const skillsSubtitle = document.querySelector('.skills__subtitle')
 const skills = document.querySelectorAll('.skills__item')
 const portfolioTitle = document.querySelector('.portfolio__title')
 const portfolioTitleBar = document.querySelector('.portfolio__title-bar')
+const contactTitle = document.querySelector('.contact__title')
+const contactTitleBar = document.querySelector('.contact__title-bar')
+const contactText = document.querySelector('.contact__text')
 
 function animateItems() {
   const windowHeight = window.innerHeight
@@ -83,6 +86,7 @@ function animateItems() {
   const aboutLinkPortfolioDistanceToTop = aboutLink.getBoundingClientRect().top
   const skillsSubtitleDistanceToTop = skillsSubtitle.getBoundingClientRect().top
   const portfolioTitleDistanceToTop = portfolioTitle.getBoundingClientRect().top
+  const contactTitleDistanceToTop = contactTitle.getBoundingClientRect().top
 
   // if aboutTitle is x% in viewport
   const aboutTitleVisible = aboutTitleDistanceToTop + windowHeight * 0.3 < windowHeight
@@ -94,6 +98,7 @@ function animateItems() {
   const aboutLinkPortfolioVisible = aboutLinkPortfolioDistanceToTop + windowHeight * 0.3 < windowHeight
   const skillsSubtitleVisible = skillsSubtitleDistanceToTop + windowHeight * 0.3 < windowHeight
   const portfolioTitleVisible = portfolioTitleDistanceToTop + windowHeight * 0.1 < windowHeight
+  const contactTitleVisible = contactTitleDistanceToTop + windowHeight * 0.1 < windowHeight
 
   // if visible add class
   if (aboutTitleVisible && !aboutTitle.classList.contains('slide-left')) {
@@ -130,6 +135,12 @@ function animateItems() {
   if (portfolioTitleVisible && !portfolioTitle.classList.contains('slide-right')) {
     portfolioTitle.classList.add('slide-right')
     portfolioTitleBar.classList.add('slide-left')
+  }
+
+  if (contactTitleVisible && !contactTitle.classList.contains('slide-left')) {
+    contactTitle.classList.add('slide-left')
+    contactTitleBar.classList.add('slide-right')
+    contactText.classList.add('slide-up')
   }
 }
 
