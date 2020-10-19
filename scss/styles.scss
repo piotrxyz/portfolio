@@ -659,6 +659,9 @@ body {
       border: 0;
       color: #fff;
       margin-bottom: 3px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
     }
   }
 }

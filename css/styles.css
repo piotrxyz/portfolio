@@ -538,7 +538,10 @@ body {
       background: #1e242c;
       border: 0;
       color: #fff;
-      margin-bottom: 3px; }
+      margin-bottom: 3px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none; }
 
 .footer {
   background: black;
