@@ -61,7 +61,7 @@ $blue: #00b0ff;
   animation: slideRight 2s cubic-bezier(0.24, 0.45, 0.44, 0.93) forwards;
 }
 
-@keyframes slideUp {
+@keyframes slideDown {
   0% {
     opacity: 0;
     transform: translateY(-4rem);
@@ -72,8 +72,44 @@ $blue: #00b0ff;
   }
 }
 
+.slide-down {
+  animation: slideDown 1s ease forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) translateY(0);
+  }
+}
+
 .slide-up {
   animation: slideUp 1s ease forwards;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  80% {
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.pop-in {
+  animation: popIn 1s ease forwards;
 }
 
 * {
@@ -521,6 +557,7 @@ body {
 
     @include media("large") {
       grid-template-columns: 1fr 1fr 1fr;
+      max-width: 1000px;
     }
   }
 
@@ -529,12 +566,17 @@ body {
     height: 300px;
     margin: 10px 10px;
     background: rgba(0, 0, 0, 0.438);
+    opacity: 0;
   }
 }
 
 .contact {
-  @include section;
+  padding: 30px 0;
   background: #ffffff;
+
+  @include media("medium") {
+    height: 80vh;
+  }
 
   &__heading {
     @include heading;
@@ -554,6 +596,70 @@ body {
     margin: auto;
     text-align: center;
     font-size: 2rem;
+    color: $blue;
+    opacity: 0;
+
+    @include media("medium") {
+      padding: 60px 0;
+    }
+
+    &-mail {
+      text-decoration: none;
+      color: black;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+
+    @include media("medium") {
+      width: 500px;
+    }
+
+    textarea {
+      background: #1e242c;
+      border: 0;
+      color: #fff;
+      margin-bottom: 3px;
+      padding: 10px 15px;
+      height: 200px;
+      resize: vertical;
+    }
+
+    &-name {
+      padding: 10px 15px;
+    }
+
+    &-mail {
+      padding: 10px 15px;
+    }
+
+    &-textarea {
+    }
+
+    &-submit {
+      display: flex;
+      justify-content: center;
+      align-self: flex-end;
+      cursor: pointer;
+      transition: all 0.5s;
+      margin-top: 5px;
+      padding: 10px 30px;
+
+      &:hover {
+        background: $blue;
+      }
+    }
+
+    input {
+      background: #1e242c;
+      border: 0;
+      color: #fff;
+      margin-bottom: 3px;
+    }
   }
 }
 
@@ -565,6 +671,10 @@ body {
   align-items: center;
   justify-content: center;
   padding: 30px;
+
+  @include media("medium") {
+    height: 20vh;
+  }
 
   &__links {
     display: flex;

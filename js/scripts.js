@@ -73,7 +73,9 @@ const portfolioTitle = document.querySelector('.portfolio__title')
 const portfolioTitleBar = document.querySelector('.portfolio__title-bar')
 const contactTitle = document.querySelector('.contact__title')
 const contactTitleBar = document.querySelector('.contact__title-bar')
-const contactText = document.querySelector('.contact__text')
+const contactText = document.querySelectorAll('.contact__text')
+const contactForm = document.querySelector('.contact__form')
+const projects = document.querySelectorAll('.project')
 
 function animateItems() {
   const windowHeight = window.innerHeight
@@ -104,26 +106,33 @@ function animateItems() {
   if (aboutTitleVisible && !aboutTitle.classList.contains('slide-left')) {
     aboutTitle.classList.add('slide-left')
   }
+
   if (aboutTitleBarVisible && !aboutTitleBar.classList.contains('slide-right')) {
     aboutTitleBar.classList.add('slide-right')
   }
-  if (aboutImgVisible && !aboutImg.classList.contains('slide-up')) {
-    aboutImg.classList.add('slide-up')
+
+  if (aboutImgVisible && !aboutImg.classList.contains('slide-down')) {
+    aboutImg.classList.add('slide-down')
   }
-  if (aboutSubtitleVisible && !aboutSubtitle.classList.contains('slide-up')) {
-    aboutSubtitle.classList.add('slide-up')
+
+  if (aboutSubtitleVisible && !aboutSubtitle.classList.contains('slide-down')) {
+    aboutSubtitle.classList.add('slide-down')
   }
-  if (aboutDescriptionVisible && !aboutDescription.classList.contains('slide-up')) {
-    aboutDescription.classList.add('slide-up')
+
+  if (aboutDescriptionVisible && !aboutDescription.classList.contains('slide-down')) {
+    aboutDescription.classList.add('slide-down')
   }
-  if (aboutLinkVisible && !aboutLink.classList.contains('slide-up')) {
-    aboutLink.classList.add('slide-up')
+
+  if (aboutLinkVisible && !aboutLink.classList.contains('slide-down')) {
+    aboutLink.classList.add('slide-down')
   }
-  if (aboutLinkPortfolioVisible && !aboutLinkPortfolio.classList.contains('slide-up')) {
-    aboutLinkPortfolio.classList.add('slide-up')
+
+  if (aboutLinkPortfolioVisible && !aboutLinkPortfolio.classList.contains('slide-down')) {
+    aboutLinkPortfolio.classList.add('slide-down')
   }
-  if (skillsSubtitleVisible && !skillsSubtitle.classList.contains('slide-up')) {
-    skillsSubtitle.classList.add('slide-up')
+
+  if (skillsSubtitleVisible && !skillsSubtitle.classList.contains('slide-down')) {
+    skillsSubtitle.classList.add('slide-down')
   }
 
   if (skillsSubtitleVisible && !skills[0].classList.contains('fade-in')) {
@@ -135,12 +144,18 @@ function animateItems() {
   if (portfolioTitleVisible && !portfolioTitle.classList.contains('slide-right')) {
     portfolioTitle.classList.add('slide-right')
     portfolioTitleBar.classList.add('slide-left')
+    projects.forEach((project, index) => setTimeout(() => {
+      project.classList.add('slide-up')
+    }, 350 * (index)))
   }
 
   if (contactTitleVisible && !contactTitle.classList.contains('slide-left')) {
     contactTitle.classList.add('slide-left')
     contactTitleBar.classList.add('slide-right')
-    contactText.classList.add('slide-up')
+    contactText.forEach((text, index) => setTimeout(() => {
+      text.classList.add('slide-down')
+    }, 350 * (index)))
+    contactForm.classList.add('pop-in')
   }
 }
 
