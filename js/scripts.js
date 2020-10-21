@@ -65,7 +65,7 @@ const aboutTitleBar = document.querySelector('.about__title-bar')
 const aboutSubtitle = document.querySelector('.about__subtitle')
 const aboutDescription = document.querySelector('.about__description')
 const aboutImg = document.querySelector('.about__me-img')
-const aboutLink = document.querySelector('.about__description-link')
+const aboutLinkContact = document.querySelector('.about__description-link--contact')
 const aboutLinkPortfolio = document.querySelector('.about__description-link--portfolio')
 const skillsSubtitle = document.querySelector('.skills__subtitle')
 const skills = document.querySelectorAll('.skills__item')
@@ -84,8 +84,8 @@ function animateItems() {
   const aboutImgDistanceToTop = aboutImg.getBoundingClientRect().top
   const aboutSubtitleDistanceToTop = aboutSubtitle.getBoundingClientRect().top
   const aboutDescriptionDistanceToTop = aboutDescription.getBoundingClientRect().top
-  const aboutLinkDistanceToTop = aboutLink.getBoundingClientRect().top
-  const aboutLinkPortfolioDistanceToTop = aboutLink.getBoundingClientRect().top
+  const aboutLinkDistanceToTop = aboutLinkContact.getBoundingClientRect().top
+  const aboutLinkPortfolioDistanceToTop = aboutLinkContact.getBoundingClientRect().top
   const skillsSubtitleDistanceToTop = skillsSubtitle.getBoundingClientRect().top
   const portfolioTitleDistanceToTop = portfolioTitle.getBoundingClientRect().top
   const contactTitleDistanceToTop = contactTitle.getBoundingClientRect().top
@@ -123,8 +123,8 @@ function animateItems() {
     aboutDescription.classList.add('slide-down')
   }
 
-  if (aboutLinkVisible && !aboutLink.classList.contains('slide-down')) {
-    aboutLink.classList.add('slide-down')
+  if (aboutLinkVisible && !aboutLinkContact.classList.contains('slide-down')) {
+    aboutLinkContact.classList.add('slide-down')
   }
 
   if (aboutLinkPortfolioVisible && !aboutLinkPortfolio.classList.contains('slide-down')) {

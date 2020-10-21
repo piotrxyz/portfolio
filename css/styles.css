@@ -355,6 +355,12 @@ body {
       opacity: 0; }
       .about__description-link:hover {
         font-size: 2.6rem; }
+      .about__description-link--linkedin {
+        font-size: 1.8rem;
+        font-weight: normal;
+        opacity: 1; }
+        .about__description-link--linkedin:hover {
+          font-size: 1.8rem; }
       .about__description-link--portfolio {
         margin-top: 0;
         animation-delay: 0.5s; }
@@ -503,7 +509,10 @@ body {
         padding: 60px 0; } }
     .contact__text-mail {
       text-decoration: none;
-      color: black; }
+      color: black;
+      transition: all 0.5s; }
+      .contact__text-mail:hover {
+        font-size: 2.1rem; }
   .contact__form {
     display: flex;
     flex-direction: column;
@@ -525,6 +534,7 @@ body {
     .contact__form-mail {
       padding: 10px 15px; }
     .contact__form-submit {
+      font-family: "Raleway", sans-serif;
       display: flex;
       justify-content: center;
       align-self: flex-end;
@@ -544,8 +554,7 @@ body {
       appearance: none; }
 
 .footer {
-  background: black;
-  color: white;
+  background: #252934;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -555,27 +564,20 @@ body {
     .footer {
       height: 20vh; } }
   .footer__links {
-    display: flex;
-    flex-direction: column; }
-    @media (min-width: 768px) {
-      .footer__links {
-        flex-direction: row; } }
+    display: flex; }
     .footer__links-link {
-      display: flex;
-      justify-content: center;
-      align-items: center;
       margin: 10px;
-      width: 150px;
+      width: 40px;
       height: 40px;
-      font-size: 1.5rem;
-      text-decoration: none;
-      color: white; }
+      transition: all 0.5s; }
+      .footer__links-link:hover {
+        transform: scale(1.05); }
       .footer__links-link--linkedin {
-        background: rgba(6, 111, 248, 0.548); }
+        background: url(/assets/linkedin.svg); }
       .footer__links-link--github {
-        background: rgba(91, 96, 102, 0.294); }
+        background: url(/assets/github.svg);
+        background-size: contain; }
   .footer__text {
-    display: block;
     text-transform: uppercase;
     color: rgba(176, 224, 234, 0.61);
     letter-spacing: 2;

@@ -451,6 +451,16 @@ body {
         font-size: 2.6rem;
       }
 
+      &--linkedin {
+        font-size: 1.8rem;
+        font-weight: normal;
+        opacity: 1;
+
+        &:hover {
+          font-size: 1.8rem;
+        }
+      }
+
       &--portfolio {
         margin-top: 0;
         animation-delay: 0.5s;
@@ -606,6 +616,11 @@ body {
     &-mail {
       text-decoration: none;
       color: black;
+      transition: all 0.5s;
+
+      &:hover {
+        font-size: 2.1rem;
+      }
     }
   }
 
@@ -641,6 +656,7 @@ body {
     }
 
     &-submit {
+      font-family: "Raleway", sans-serif;
       display: flex;
       justify-content: center;
       align-self: flex-end;
@@ -667,8 +683,7 @@ body {
 }
 
 .footer {
-  background: black;
-  color: white;
+  background: #252934;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -681,32 +696,29 @@ body {
 
   &__links {
     display: flex;
-    flex-direction: column;
-    @include media("medium") {
-      flex-direction: row;
-    }
 
     &-link {
-      display: flex;
-      justify-content: center;
-      align-items: center;
       margin: 10px;
-      width: 150px;
+      width: 40px;
       height: 40px;
-      font-size: 1.5rem;
-      text-decoration: none;
-      color: white;
+      transition: all 0.5s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
 
       &--linkedin {
-        background: rgba(6, 111, 248, 0.548);
+        background: url(/assets/linkedin.svg);
       }
+
       &--github {
-        background: rgba(91, 96, 102, 0.294);
+        background: url(/assets/github.svg);
+        background-size: contain;
       }
     }
   }
+
   &__text {
-    display: block;
     text-transform: uppercase;
     color: rgba(176, 224, 234, 0.61);
     letter-spacing: 2;
