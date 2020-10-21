@@ -573,9 +573,9 @@ body {
       .footer__links-link:hover {
         transform: scale(1.05); }
       .footer__links-link--linkedin {
-        background: url(./assets/linkedin.svg); }
+        background: url(../assets/linkedin.svg); }
       .footer__links-link--github {
-        background: url(./assets/github.svg);
+        background: url(../assets/github.svg);
         background-size: contain; }
   .footer__text {
     text-transform: uppercase;
