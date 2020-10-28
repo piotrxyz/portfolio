@@ -166,34 +166,46 @@
         </div>
         <div class="projects__container">
         <article class="project">
-          <div class="project__modal">
-
-          </div>
+          <img 
+            class="project__img" 
+            src="./assets/your-service.jpg" 
+            alt="screenshot of your-service website"
+          >
         </article>
         <article class="project">
-          <div class="project__modal">
-            
-          </div>
+          <img 
+            class="project__img" 
+            src="./assets/weather-app.jpg" 
+            alt="screenshot of weather-app"
+          >
         </article>
         <article class="project">
-          <div class="project__modal">
-            
-          </div>
+          <img 
+            class="project__img" 
+            src="./assets/gifstagram-app.jpg" 
+            alt="screenshot of gifstagram-app"
+          >
         </article>
         <article class="project">
-          <div class="project__modal">
-            
-          </div>
+          <img 
+            class="project__img" 
+            src="./assets/rock-paper-scissors.jpg" 
+            alt="screenshot of rock-paper-scissors-app"
+          >
         </article>
         <article class="project">
-          <div class="project__modal">
-            
-          </div>
+          <img 
+            class="project__img" 
+            src="./assets/todo-app.jpg" 
+            alt="screenshot of todo-app"
+          >
         </article>
         <article class="project">
-          <div class="project__modal">
-            
-          </div>
+          <img 
+            class="project__img" 
+            src="./assets/portfolio.jpg" 
+            alt="screenshot of portfolio website"
+          >
         </article>
       </div>
       </section>
@@ -205,18 +217,65 @@
         <p class="contact__text">
           Have a question or want to work together?
         </p>
-        <form class="contact__form">
-          <input class="contact__form-name" placeholder="Name" required>
-          <input class="contact__form-mail" placeholder="E-mail" required>
-          <textarea class="contact__form-textarea" placeholder="Your message"></textarea>
-          <input class="contact__form-submit" type="submit" value="SUBMIT"></input>
+        <form 
+          id="contact__form" 
+          class="contact__form" 
+          action="scripts/send.php" 
+          method="post"
+        >
+          <input 
+            id="contact__form-name" 
+            class="contact__form-name" 
+            name="name" 
+            type="text" 
+            placeholder="Name" 
+            required 
+          />
+          <label 
+            class="contact__form-label" 
+            for="contact__form-name">
+            Name / company
+          </label>
+          <input 
+            id="contact__form-mail" 
+            class="contact__form-mail" 
+            name="email" 
+            type="text" 
+            placeholder="E-mail" 
+            pattern="[^@\s]+@[^@\s]+\.[^@\s]+" 
+            required 
+          />
+          <label 
+            class="contact__form-label" 
+            for="contact__form-mail">
+            E-mail
+          </label>
+          <textarea 
+            id="contact__form-message" 
+            class="contact__form-message" 
+            name="message" 
+            placeholder="Your message">
+          </textarea>
+          <label 
+            class="contact__form-label" 
+            for="contact__form-message">
+            Your message
+          </label>
+          <input 
+            id="contact__form-submit" 
+            class="contact__form-submit" 
+            type="submit" 
+            value="SUBMIT" 
+            aria-label="send message" 
+          />
         </form>
-        <p class="contact__text">
+        <address class="contact__text">
           Or direct message at: 
           <br>
           <a class="contact__text-mail" 
-             href="mailto:piotr.zalom@gmail.com">piotr.zalom@gmail.com</a>
-        </p>
+             href="mailto:piotr.zalom@gmail.com">piotr.zalom@gmail.com
+          </a>
+        </address>
       </section>
     </main>
     <footer id="footer" class="footer">
@@ -237,6 +296,6 @@
       <span class="footer__text">&copy; 2020 PK</span>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="./js/scripts.js"></script>
+    <script src="./scripts/main.js"></script>
   </body>
 </html>

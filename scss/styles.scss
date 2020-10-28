@@ -532,7 +532,8 @@ body {
 }
 
 .portfolio {
-  @include section;
+  padding: 30px 0;
+  background: #f5f5f5;
 
   &__heading {
     @include heading;
@@ -540,14 +541,11 @@ body {
 
   &__title {
     @include title;
-    color: white;
+    color: black;
 
-    &::after {
-      background: white;
-    }
     &-bar {
       @include title-bar;
-      background: white;
+      background: black;
     }
   }
 
@@ -555,28 +553,41 @@ body {
     display: grid;
     justify-items: center;
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: repeat(6, auto);
+    grid-row-gap: 10px;
     padding: 30px 0;
     transition: all 1s;
+    margin: auto;
 
     @include media("medium") {
-      max-width: 90%;
-      margin: auto;
       grid-template-columns: 1fr 1fr;
     }
 
-    @include media("large") {
-      grid-template-columns: 1fr 1fr 1fr;
-      max-width: 1000px;
+    @include media("x-large") {
+      padding: 60px 0;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, auto);
+      grid-row-gap: 20px;
+      grid-column-gap: 20px;
+      max-width: 1200px;
     }
-  }
 
-  .project {
-    width: 300px;
-    height: 300px;
-    margin: 10px 10px;
-    background: rgba(0, 0, 0, 0.438);
-    opacity: 0;
+    .project {
+      opacity: 0;
+
+      &__img {
+        position: relative;
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        min-height: 240px;
+        max-height: 240px;
+
+        @include media("medium") {
+          max-width: 100%;
+        }
+      }
+    }
   }
 }
 
@@ -602,10 +613,11 @@ body {
 
   &__text {
     padding: 30px 0;
-    width: 60%;
+    width: 70%;
     margin: auto;
     text-align: center;
     font-size: 2rem;
+    font-style: normal;
     color: $blue;
     opacity: 0;
 
@@ -630,7 +642,7 @@ body {
     width: 90%;
     margin: auto;
 
-    @include media("medium") {
+    @include media("small") {
       width: 500px;
     }
 
@@ -652,9 +664,6 @@ body {
       padding: 10px 15px;
     }
 
-    &-textarea {
-    }
-
     &-submit {
       font-family: "Raleway", sans-serif;
       display: flex;
@@ -668,6 +677,10 @@ body {
       &:hover {
         background: $blue;
       }
+    }
+
+    &-label {
+      display: none;
     }
 
     input {
