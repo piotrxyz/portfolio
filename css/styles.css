@@ -213,11 +213,14 @@ body {
   .menu__list {
     list-style: none;
     width: 90%;
-    height: 60%;
+    height: 75%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center; }
+    @media (min-width: 768px) {
+      .menu__list {
+        height: 60%; } }
   .menu__item {
     width: 90%;
     max-width: 600px;
@@ -416,7 +419,10 @@ body {
         font-size: 1.8rem; } }
 
 .portfolio {
+  min-height: 100vh;
   padding: 30px 0;
+  display: flex;
+  flex-direction: column;
   background: #f5f5f5; }
   .portfolio__heading {
     align-items: center;
@@ -470,7 +476,11 @@ body {
         max-width: 350px;
         height: auto;
         min-height: 240px;
-        max-height: 240px; }
+        max-height: 240px;
+        transition: all 0.5s;
+        overflow: hidden; }
+        .portfolio .projects__container .project__img:hover {
+          transform: scale(1.1); }
         @media (min-width: 768px) {
           .portfolio .projects__container .project__img {
             max-width: 100%; } }
