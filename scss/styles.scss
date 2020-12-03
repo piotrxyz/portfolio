@@ -592,7 +592,7 @@ body {
         overflow: hidden;
 
         &:hover {
-          transform: scale(1.1);
+          transform: scale(1.02);
         }
 
         @include media("medium") {
@@ -643,7 +643,7 @@ body {
       transition: all 0.5s;
 
       &:hover {
-        font-size: 2.1rem;
+        font-size: 2.05rem;
       }
     }
   }
@@ -658,7 +658,7 @@ body {
       width: 500px;
     }
 
-    textarea {
+    &-message {
       background: #1e242c;
       border: 0;
       color: #fff;
