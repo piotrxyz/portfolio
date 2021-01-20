@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 @import "mixins";
 
 $blue: #00b0ff;
@@ -285,7 +286,8 @@ body {
   top: -100%;
   width: 100%;
   height: 100%;
-  background: #1a1d25;
+  background: #1b1e24;
+  // background: #1a1d25;
   z-index: 2;
   transition: all 0.3s;
 
@@ -308,7 +310,6 @@ body {
     max-width: 600px;
     height: calc(100% / 4);
     position: relative;
-    background-color: rgba(0, 0, 0, 0.02);
     overflow: hidden;
   }
 
@@ -318,9 +319,10 @@ body {
     justify-content: center;
     width: 100%;
     height: 100%;
+    font-family: "Montserrat", sans-serif;
     font-size: 5rem;
     text-decoration: none;
-    color: rgba(128, 128, 128, 0.905);
+    color: #989898;
     transition: all 1s;
 
     &:hover {
@@ -330,7 +332,7 @@ body {
     &::before {
       top: 0;
       transform: translate3d(-100%, 0, 0);
-      background-color: rgba(0, 0, 0, 0.02);
+      background-color: rgba(0, 0, 0, 0.2);
       z-index: -2;
       content: " ";
       height: 75%;
@@ -354,7 +356,7 @@ body {
       transition: transform 0.4s cubic-bezier(0.65, 0.15, 0, 1);
       bottom: 0;
       transition-delay: 125ms;
-      background-color: rgba(0, 0, 0, 0.02);
+      background-color: rgba(0, 0, 0, 0.2);
       z-index: -3;
     }
 
@@ -723,7 +725,6 @@ body {
 }
 
 .footer {
-  // background: #252934;
   display: flex;
   flex-direction: column;
   align-items: center;
