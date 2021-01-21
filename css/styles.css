@@ -286,8 +286,8 @@ body {
     display: flex;
     flex-direction: column; }
   .about__title {
+    color: black;
     font-weight: 900;
-    text-align: center;
     font-size: 3.2rem;
     transition: all 0.3s;
     text-transform: uppercase;
@@ -299,7 +299,7 @@ body {
       .about__title {
         font-size: 5rem; } }
     .about__title-bar {
-      background: #444649;
+      background: black;
       height: 4px;
       width: 110px;
       opacity: 0; }
@@ -426,21 +426,18 @@ body {
 .portfolio {
   min-height: 100vh;
   padding: 30px 0;
-  display: flex;
-  flex-direction: column;
   background: #f5f5f5; }
   .portfolio__heading {
     align-items: center;
     display: flex;
     flex-direction: column; }
   .portfolio__title {
+    color: black;
     font-weight: 900;
-    text-align: center;
     font-size: 3.2rem;
     transition: all 0.3s;
     text-transform: uppercase;
-    opacity: 0;
-    color: black; }
+    opacity: 0; }
     @media (min-width: 768px) {
       .portfolio__title {
         font-size: 4rem; } }
@@ -448,47 +445,83 @@ body {
       .portfolio__title {
         font-size: 5rem; } }
     .portfolio__title-bar {
-      background: #444649;
+      background: black;
       height: 4px;
       width: 110px;
-      opacity: 0;
-      background: black; }
-  .portfolio .projects__container {
-    display: grid;
-    justify-items: center;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, auto);
-    grid-row-gap: 10px;
-    padding: 30px 0;
-    transition: all 1s;
-    margin: auto; }
-    @media (min-width: 768px) {
-      .portfolio .projects__container {
-        grid-template-columns: repeat(2, 1fr); } }
-    @media (min-width: 1200px) {
-      .portfolio .projects__container {
-        padding: 60px 0;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, auto);
-        grid-row-gap: 20px;
-        grid-column-gap: 20px;
-        max-width: 1000px; } }
-    .portfolio .projects__container .project {
       opacity: 0; }
-      .portfolio .projects__container .project__img {
-        position: relative;
+  .portfolio .projects__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0; }
+    @media (min-width: 1000px) {
+      .portfolio .projects__container {
+        justify-content: center;
         width: 100%;
-        max-width: 350px;
-        height: auto;
-        min-height: 240px;
-        max-height: 240px;
+        height: 80%; } }
+    .portfolio .projects__container .project {
+      display: flex;
+      justify-content: space-between;
+      opacity: 0;
+      padding: 20px 0;
+      max-width: 90%;
+      width: 300px; }
+      @media (min-width: 1000px) {
+        .portfolio .projects__container .project {
+          min-width: 600px; } }
+      .portfolio .projects__container .project__card {
+        max-width: 55%; }
+      .portfolio .projects__container .project__link {
+        text-decoration: none;
+        color: black;
+        transition: all 0.5s; }
+        .portfolio .projects__container .project__link:hover {
+          color: #00b0ff; }
+      .portfolio .projects__container .project__title {
+        transition: all 0.5s; }
+        @media (min-width: 1000px) {
+          .portfolio .projects__container .project__title {
+            font-size: 2rem; } }
+      .portfolio .projects__container .project__description {
+        font-size: 1.3rem;
+        padding: 10px 0;
+        transition: all 0.5s; }
+        @media (min-width: 1000px) {
+          .portfolio .projects__container .project__description {
+            font-size: 1.6rem; } }
+      .portfolio .projects__container .project__btn {
+        width: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 5px 5px 5px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: white;
         transition: all 0.5s;
-        overflow: hidden; }
-        .portfolio .projects__container .project__img:hover {
-          transform: scale(1.02); }
-        @media (min-width: 768px) {
+        background: #1f252d; }
+        .portfolio .projects__container .project__btn:hover {
+          background: #00b0ff; }
+        @media (min-width: 1000px) {
+          .portfolio .projects__container .project__btn {
+            width: 75px;
+            padding: 10px 10px 10px 10px; } }
+        .portfolio .projects__container .project__btn img {
+          width: 15px;
+          height: 15px;
+          filter: invert(100%); }
+          @media (min-width: 1000px) {
+            .portfolio .projects__container .project__btn img {
+              width: 20px;
+              height: 20px; } }
+      .portfolio .projects__container .project__img {
+        max-width: 120px;
+        max-height: 80px;
+        transition: all 0.5s; }
+        @media (min-width: 1000px) {
           .portfolio .projects__container .project__img {
-            max-width: 100%; } }
+            max-width: 160px;
+            max-height: 90px; } }
 
 .contact {
   padding: 30px 0;
@@ -498,8 +531,8 @@ body {
     display: flex;
     flex-direction: column; }
   .contact__title {
+    color: black;
     font-weight: 900;
-    text-align: center;
     font-size: 3.2rem;
     transition: all 0.3s;
     text-transform: uppercase;
@@ -511,7 +544,7 @@ body {
       .contact__title {
         font-size: 5rem; } }
     .contact__title-bar {
-      background: #444649;
+      background: black;
       height: 4px;
       width: 110px;
       opacity: 0;
@@ -591,7 +624,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 30px; }
+  padding: 30px;
+  font-family: "Montserrat", sans-serif; }
   @media (min-width: 768px) {
     .footer {
       height: 20vh; } }
@@ -611,9 +645,7 @@ body {
         background-size: contain;
         filter: invert(100%); }
   .footer__text {
-    text-transform: uppercase;
-    color: rgba(176, 224, 234, 0.61);
-    letter-spacing: 2;
+    color: #00b0ff;
     font-size: 1.2rem;
     padding: 20px; }
 

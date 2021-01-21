@@ -35,8 +35,8 @@ $breakpoints: (
 }
 
 @mixin title {
+  color: black;
   font-weight: 900;
-  text-align: center;
   font-size: 3.2rem;
   transition: all 0.3s;
   text-transform: uppercase;
@@ -52,7 +52,7 @@ $breakpoints: (
 }
 
 @mixin title-bar {
-  background: #444649;
+  background: black;
   height: 4px;
   width: 110px;
   opacity: 0;
