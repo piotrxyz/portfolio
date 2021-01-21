@@ -754,6 +754,7 @@ body {
       &--github {
         background: url(../assets/github.svg);
         background-size: contain;
+        filter: invert(100%);
       }
     }
   }

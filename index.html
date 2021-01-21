@@ -215,8 +215,8 @@
         <form 
           id="contact__form" 
           class="contact__form" 
-          action="scripts/send.php" 
-          method="post"
+          action="https://formspree.io/f/xwkwybvw"
+          method="POST"
         >
           <input 
             id="contact__form-name" 
@@ -234,7 +234,7 @@
           <input 
             id="contact__form-mail" 
             class="contact__form-mail" 
-            name="email" 
+            name="_replyto" 
             type="text" 
             placeholder="E-mail" 
             pattern="[^@\s]+@[^@\s]+\.[^@\s]+" 
@@ -261,7 +261,7 @@
             id="contact__form-submit" 
             class="contact__form-submit" 
             type="submit" 
-            value="SUBMIT" 
+            value="SEND" 
             aria-label="send message" 
           />
         </form>

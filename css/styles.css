@@ -608,7 +608,8 @@ body {
         background: url(../assets/linkedin.svg); }
       .footer__links-link--github {
         background: url(../assets/github.svg);
-        background-size: contain; }
+        background-size: contain;
+        filter: invert(100%); }
   .footer__text {
     text-transform: uppercase;
     color: rgba(176, 224, 234, 0.61);
